@@ -11,7 +11,7 @@ img {
 }
 
 body {
-  background-color: #24292e;
+  background-color: #000000;
   font-family: "Kumbh Sans", sans-serif;
   text-align: center;
   padding-bottom: 100px;
@@ -82,7 +82,7 @@ main {
 }
 
 .container header #btn-search:hover {
-  background-color: hotpink;
+  background-color: coral;
   color: #ffffff;
   border-color: #ffffff;
 }
@@ -109,7 +109,7 @@ main {
 .container .profile-data .info img {
   width: 50%;
   border-radius: 50%;
-  border: 7px solid hotpink;
+  border: 7px solid coral;
   margin-right: 80px;
 }
 
@@ -144,11 +144,11 @@ main {
   margin: 20px;
   display: block;
   border-radius: 7px;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .container .profile-data .repositories ul li a:hover {
-  background-color: hotpink;
+  background-color: coral;
   color: #fff
 }
 
