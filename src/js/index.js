@@ -1,5 +1,6 @@
 import { getUser } from "../js/services/user.js"
 import { getRepositories } from "../js/services/repositories.js"
+import { getActivities } from '../js/services/activities.js'
 
 import { user } from "../js/objects/user.js"
 import { screen } from "../js/objects/screen.js"
@@ -40,9 +41,11 @@ async function getUserData(userName) {
     }
 
     const repositoriesResponse = await getRepositories(userName)
+    const activitiesResponse = await getActivities(userName)
 
     user.setInfo(userResponse)
     user.setRepositories(repositoriesResponse)
+    user.setActivities(activitiesResponse)
 
     screen.renderUser(user)
 }
