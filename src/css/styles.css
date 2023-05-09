@@ -227,6 +227,18 @@ main {
   .container header #btn-search {
     width: 100%;
   }
+
+  .container .profile-data .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container .profile-data .info img {
+    margin-bottom: 20px;
+    margin-right: 50px;
+  }
+
 }
 
 @media (max-width: 425px) {
@@ -236,6 +248,7 @@ main {
 
   .container .profile-data .info img {
     margin-bottom: 20px;
+    margin-right: 0;
   }
 
   .container .profile-data .info img,
