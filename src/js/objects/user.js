@@ -2,11 +2,11 @@ const user = {
     avatarUrl: '',
     name: '',
     bio: '',
+    userName: '',
     followers: '',
     following: '',
-    userName: '',
     repositories: [],
-    activities: [],
+    events: [],
 
     setInfo(gitHubUser) {
         this.avatarUrl = gitHubUser.avatar_url
@@ -19,11 +19,11 @@ const user = {
 
     setRepositories(repositories) {
         this.repositories = repositories
-        this.forks = repositories.forks
+
     },
 
-    setActivities(activities) {
-        this.activities = activities
+    setEvents(events) {
+        this.events = events
     }
 }
 

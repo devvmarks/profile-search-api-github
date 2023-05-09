@@ -201,6 +201,25 @@ main {
 }
 
 /* EVENTS */
+.container .profile-data .events {
+  background-color: lightgray;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.container .profile-data .events h2,
+.container .profile-data .events ul li {
+  margin-bottom: 10px;
+}
+
+.container .profile-data .events .eventrepository {
+  font-weight: 700;
+}
+
+.container .profile-data .events .eventUpdate {
+  font-weight: 100;
+}
 
 /* MEDIA  */
 

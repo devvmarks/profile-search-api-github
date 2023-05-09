@@ -45,26 +45,21 @@ const screen = {
             <h1 class="title">Atividades recentes</h1>
         </div>`
 
-        user.activities.forEach(reposName => {
-            const repositoryName = reposName.repo.name
-
-            if (reposName.payload) {
-                if (reposName.payload.commits) {
-                    reposName.payload.commits.forEach(messages => {
-                        const commitMessage = messages.message
-
-                        document.querySelector('.profile-data').innerHTML += `
-                        <span class="activityListClass">
-                            <ul>
-                                <li>
-                                    <p><strong>${repositoryName}</strong>: ${commitMessage}</p>
-                                </li>
-                            </ul>
-                        </span>`
-                    })
-                }
+        let eventsItens = ''
+        user.events.forEach((event) => {
+            if (event.type == "CreateEvent") {
+                eventsItens += `<li><span class="eventrepository">${element.repo.name}</span> - <span class="eventupdate">Criado um ${element.payload.ref_type}</span></li>`
+            } else {
+                eventsItens += `<li><span class="eventrepository">${element.repo.name}</span> - <span class="eventupdate">${element.payload.commits[0].message}</span></li>`
             }
         })
+
+        if (user.events.length > 0) {
+            this.userProfile.innerHTML += `<div class='events section'>
+                                                <h2>Eventos</h2>
+                                                <ul>${eventsItens}</ul>
+                                            </div>`
+        }
     },
     renderNotFound() {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado</h3> "
